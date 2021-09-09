@@ -17,13 +17,11 @@ namespace UniGLTF.EditorSettingsValidator
 
         private static void Validate()
         {
-#if ENABLE_VRMCOLOR
             if (!Validator.IsValid())
             {
                 var window = GetWindow<UnityEditorSettingsValidatorWindow>(utility: true);
                 window.minSize = new Vector2(320, 300);
             }
-#endif
         }
 
         private void OnProjectChange()
